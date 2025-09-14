@@ -36,7 +36,7 @@ Start/prepare Ollama:(Not for motivating example)
 
 ollama pull nomic-embed-text
 ollama serve    # serves http://127.0.0.1:11434
-🔐 Configure Keys (choose GPT or Claude per run)
+ Configure Keys (choose GPT or Claude per run)
 
 3) Environment Setup
 
@@ -46,7 +46,7 @@ Before running the script, create a `.env` file in the project root and add your
 
 ```env
 LLM_PROVIDER=anthropic        # or: openai
-🔐 Claude (Anthropic) — If using Claude
+ Claude (Anthropic) — If using Claude
 ANTHROPIC_API_KEY=your_anthropic_api_key_here
 CHAT_MODEL=claude-3-7-sonnet-20250219
 OpenAI (GPT) — If using GPT
@@ -90,14 +90,14 @@ terminal_output.csv            # labels + NLP contract + insight + output paths
 
 
 
-▶️ Evaluation
+8) Evaluation
 
 To evaluate metrics like accuracy,precision,recall and F1 score of the generated labels,
 run the metrics_final.js script as provided in the package.
 
-❗ Troubleshooting
-Embeddings connection refused (127.0.0.1:11434) → Start Ollama (ollama serve).
+
 
 Missing <BUGGY_CODE> / <FIXED_CODE> → Check prompt tags, raise max_tokens, set SHOW_PY_PROMPT=1.
+
 
 Labels look off → Improve embedded_examples.json retrieval quality and verify CHAT_MODEL / provider selection.
